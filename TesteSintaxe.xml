@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Pessoa>
+    <CodigoPes> 0 </CodigoPes>
+    <NomePes>Victor Leon Virgilio</NomePes> 
+    <IdentPes>436911188</IdentPes>
+    <CPFPes>34104203807</CPFPes>
+    <TelPes>11972544448</TelPes>
+    <EmailPes>dev.vic.virgilio@gmail.com</EmailPes>
+    <EnderecoPes>
+        <CodigoEnd>0</CodigoEnd>
+        <CEPEnd>07700000</CEPEnd>
+        <LogradEnd>Rua Taubaté</LogradEnd>
+        <NumeroEnd>178</NumeroEnd>
+        <ComplEnd>Ao lado do escadão</ComplEnd>
+        <BairroEnd>Serpa</BairroEnd>
+        <CidadeEnd>Caieiras</CidadeEnd>
+        <EstadoEnd>São Paulo</EstadoEnd>
+        <PaisEnd>Brasil</PaisEnd>
+        <AlteracaoEnd>Now()</AlteracaoEnd>
+    </EnderecoPes>
+    <AlteracaoPes>22/06/2022 18:49:55</AlteracaoPes>    
+</Pessoa>
+
+<!-- A mesma estrutura acima será montada agora abaixo, com os dados sendo passados como atributos e não como objetos -->
+
+<Pessoa CodigoPes=0 NomePes="Victor Leon Virgilio" IdentPes="436911188" CPFPes="34104203807" TelPes="11972544448" EmailPes="dev.vic.virgilio@gmail.com">
+    <EnderecoPes CodigoEnd=0 CEPEnd="07700000" LogradEnd="Rua Taubaté" NumeroEnd="178" ComplEnd="Ao lado do escadão" BairroEnd="Serpa" CidadeEnd="Caieiras" EstadoEnd="São Paulo" PaisEnd= "Brasil"></EnderecoPes>
+    <EnderecoPes CodigoEnd=1 CEPEnd="07941040" LogradEnd="Rua 21 de Março" NumeroEnd="49" ComplEnd="Tropical Veterinária" BairroEnd="Estação - Belém" CidadeEnd="Francisco Morato" EstadoEnd="São Paulo" PaisEnd= "Brasil"></EnderecoPes>
+</Pessoa>
