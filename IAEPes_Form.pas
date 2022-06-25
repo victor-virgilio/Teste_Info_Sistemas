@@ -21,6 +21,7 @@ type
     edtEmail: TEdit;
     btnExecPes: TButton;
     btnCancelar: TButton;
+    ckbEmailPes: TCheckBox;
     procedure btnExecPesClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
@@ -178,6 +179,10 @@ begin
 
   if not(bErro) then begin
     dmdMain.GeraArquivoXML;
+
+    if ckbEmailPes.Checked then
+      dmdMain.EnviarEmail;
+
     frmIAEPessoa.Close;
   end;
 end;

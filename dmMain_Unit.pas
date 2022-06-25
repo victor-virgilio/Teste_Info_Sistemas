@@ -155,7 +155,6 @@ begin
   end;
 
   xmlPessoaEndereco.Active := False;
-  EnviarEmail;
 end;
 
 
@@ -189,7 +188,7 @@ begin
   IdMessage.ContentDisposition     := 'inline';
   IdMessage.Encoding               := meMIME;
   IdMessage.Body.Clear;
-  IdMessage.Body.Add('Segue em anexo um arquivo xml, gerado no castro de pessoas e endereços.');
+  IdMessage.Body.Add('Segue em anexo um arquivo xml, gerado pelo cadastro de pessoas e endereços.');
 
   sAttach := ExtractFileDir(GetCurrentDir) + '\ArquivoXml' + tbPessoaid_Codigo_Pes.asString + '.xml';
 
@@ -203,7 +202,7 @@ begin
   except
     on E:Exception do
     begin
-      ALERTMSG('Ops...','Houve algum problema durante a conexão com o servidor de Email.',false);
+      ALERTMSG('Ops...','Houve algum problema durante a conexão/autenticação com o servidor de Email.',false);
       Exit;
     end;
   end;
@@ -214,10 +213,12 @@ begin
   except
     On E:Exception do
     begin
-      ALERTMSG('Ops...','Houve algum problema durante o envio Email com xml anexo.',false);
+      ALERTMSG('Ops...','Houve algum problema durante o envio do Email com xml anexo.',false);
       Exit;
     end;
   end;
+
+  ALERTMSG('Sucesso!','Um email com o XML em anexo foi enviado para ' + tbPessoads_Email_Pes.AsString,false);
   // desconecta do servidor
   IdSMTP.Disconnect;
 end;

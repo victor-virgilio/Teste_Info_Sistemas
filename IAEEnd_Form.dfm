@@ -1,9 +1,10 @@
 object frmIAEEndereco: TfrmIAEEndereco
   Left = 0
   Top = 0
+  BorderStyle = bsToolWindow
   Caption = 'frmIAEEndereco'
-  ClientHeight = 257
-  ClientWidth = 423
+  ClientHeight = 273
+  ClientWidth = 433
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -101,7 +102,7 @@ object frmIAEEndereco: TfrmIAEEndereco
     ParentFont = False
   end
   object Label15: TLabel
-    Left = 172
+    Left = 212
     Top = 147
     Width = 38
     Height = 13
@@ -114,7 +115,7 @@ object frmIAEEndereco: TfrmIAEEndereco
     ParentFont = False
   end
   object Label16: TLabel
-    Left = 316
+    Left = 292
     Top = 147
     Width = 23
     Height = 13
@@ -203,9 +204,9 @@ object frmIAEEndereco: TfrmIAEEndereco
     OnKeyPress = edtLogradouroKeyPress
   end
   object edtCidade: TEdit
-    Left = 16
+    Left = 18
     Top = 166
-    Width = 129
+    Width = 172
     Height = 21
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -218,9 +219,9 @@ object frmIAEEndereco: TfrmIAEEndereco
     OnKeyPress = edtLogradouroKeyPress
   end
   object edtEstado: TEdit
-    Left = 172
+    Left = 212
     Top = 166
-    Width = 123
+    Width = 55
     Height = 21
     CharCase = ecUpperCase
     Font.Charset = DEFAULT_CHARSET
@@ -234,9 +235,9 @@ object frmIAEEndereco: TfrmIAEEndereco
     OnKeyPress = edtLogradouroKeyPress
   end
   object edtPais: TEdit
-    Left = 315
+    Left = 292
     Top = 166
-    Width = 90
+    Width = 113
     Height = 21
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -249,7 +250,7 @@ object frmIAEEndereco: TfrmIAEEndereco
   end
   object btnExecEnd: TButton
     Left = 8
-    Top = 218
+    Top = 233
     Width = 147
     Height = 31
     Caption = 'Pesquisar Endere'#231'o'
@@ -263,8 +264,8 @@ object frmIAEEndereco: TfrmIAEEndereco
     OnClick = btnExecEndClick
   end
   object btnCancelar: TButton
-    Left = 309
-    Top = 221
+    Left = 320
+    Top = 237
     Width = 105
     Height = 23
     Caption = '&Cancelar'
@@ -276,5 +277,13 @@ object frmIAEEndereco: TfrmIAEEndereco
     ParentFont = False
     TabOrder = 9
     OnClick = btnCancelarClick
+  end
+  object ckbEmailEnd: TCheckBox
+    Left = 8
+    Top = 212
+    Width = 287
+    Height = 17
+    Caption = 'Enviar e-mail de cadastro contendo XML atualizado.'
+    TabOrder = 10
   end
 end

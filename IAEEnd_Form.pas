@@ -27,6 +27,7 @@ type
     edtPais: TEdit;
     btnExecEnd: TButton;
     btnCancelar: TButton;
+    ckbEmailEnd: TCheckBox;
 
     procedure IncluirEndereco;
     procedure AlterarEndereco;
@@ -167,8 +168,13 @@ begin
 
   dmdMain.PreencheTabelaFilha;
 
-  if not(bErro) then begin
+  if not(bErro) then
+  begin
     dmdMain.GeraArquivoXML;
+
+    if ckbEmailEnd.Checked then
+      dmdMain.EnviarEmail;
+
     frmIAEEndereco.Close;
   end;
 end;
@@ -177,8 +183,8 @@ end;
 
 procedure TfrmIAEEndereco.FormShow(Sender: TObject);
 begin
-  frmIAEEndereco.Left := 1235;
-  frmIAEEndereco.top  := 540;
+  frmIAEEndereco.Left := 1240;
+  frmIAEEndereco.top  := 525;
 
   if strOpr = 'INC' then begin
     frmIAEEndereco.Caption := 'Incluir endereço';
@@ -215,7 +221,7 @@ end;
 
 procedure TfrmIAEEndereco.edtCEPExit(Sender: TObject);
 begin
-  if strOpr = 'EXC' then
+  if ((strOpr = 'EXC') or (Text = '')) then
     exit;
 
   if not(ValidaCEP(edtCEP.Text)) then

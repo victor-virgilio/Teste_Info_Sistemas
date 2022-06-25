@@ -3,8 +3,8 @@ object frmIAEPessoa: TfrmIAEPessoa
   Top = 0
   BorderStyle = bsDialog
   Caption = 'frmIAEPessoa'
-  ClientHeight = 247
-  ClientWidth = 419
+  ClientHeight = 270
+  ClientWidth = 414
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -163,7 +163,7 @@ object frmIAEPessoa: TfrmIAEPessoa
   end
   object btnExecPes: TButton
     Left = 8
-    Top = 208
+    Top = 231
     Width = 143
     Height = 31
     Caption = 'Pesquisar Pessoa'
@@ -177,8 +177,8 @@ object frmIAEPessoa: TfrmIAEPessoa
     OnClick = btnExecPesClick
   end
   object btnCancelar: TButton
-    Left = 306
-    Top = 216
+    Left = 297
+    Top = 232
     Width = 105
     Height = 23
     Caption = '&Cancelar'
@@ -190,5 +190,13 @@ object frmIAEPessoa: TfrmIAEPessoa
     ParentFont = False
     TabOrder = 6
     OnClick = btnCancelarClick
+  end
+  object ckbEmailPes: TCheckBox
+    Left = 10
+    Top = 209
+    Width = 287
+    Height = 17
+    Caption = 'Enviar e-mail de cadastro contendo XML atualizado.'
+    TabOrder = 7
   end
 end

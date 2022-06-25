@@ -43,14 +43,14 @@ object frmMain: TfrmMain
     ParentFont = False
   end
   object Label8: TLabel
-    Left = 23
-    Top = 329
-    Width = 76
-    Height = 16
-    Caption = 'Endere'#231'os'
+    Left = 22
+    Top = 331
+    Width = 220
+    Height = 13
+    Caption = 'Endere'#231'os da pessoa selecionada'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -11
     Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
@@ -201,7 +201,7 @@ object frmMain: TfrmMain
         Expanded = False
         FieldName = 'ds_Numero_End'
         Title.Caption = 'N'#250'mero'
-        Width = 70
+        Width = 55
         Visible = True
       end>
   end
